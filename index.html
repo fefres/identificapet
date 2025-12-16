@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdoptaIA - Plataforma de Adopción de Mascotas con IA</title>
+    <meta name="description" content="Encuentra tu mascota ideal en AdoptaIA. Primera plataforma nacional con IA que conecta protectoras y adoptantes. Búsqueda por foto, sistema de match, adopción y acogida responsable.">
+    <meta name="keywords" content="adopción mascotas, acogida temporal, perros adopción, gatos adopción, protectoras animales, adopción responsable, mascotas Madrid, adopción España, IA mascotas">
+    <meta name="geo.region" content="ES">
+    <meta name="geo.placename" content="Madrid, España">
+    <meta name="geo.position" content="40.4168;-3.7038">
+    <link rel="canonical" href="https://adoptaia.es/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adoptaia.es">
+    <meta property="og:title" content="AdoptaIA - Plataforma de Adopción de Mascotas con IA">
+    <meta property="og:description" content="Primera plataforma nacional con IA para adopción y acogida de mascotas. Búsqueda por foto, sistema de match y curso de adopción responsable.">
+    <meta property="og:image" content="https://adoptaia.es/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://adoptaia.es">
+    <meta property="twitter:title" content="AdoptaIA - Plataforma de Adopción de Mascotas con IA">
+    <meta property="twitter:description" content="Primera plataforma nacional con IA para adopción y acogida de mascotas. Búsqueda por foto, sistema de match y curso de adopción responsable.">
+    <meta property="twitter:image" content="https://adoptaia.es/og-image.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AdoptaIA",
+        "url": "https://adoptaia.es",
+        "description": "Primera plataforma nacional con inteligencia artificial para adopción y acogida responsable de mascotas",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://adoptaia.es/buscar?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-blue-600">AdoptaIA</h1>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="#inicio" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Inicio</a>
+                        <a href="#como-funciona" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Cómo Funciona</a>
+                        <a href="#mascotas" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Mascotas</a>
+                        <a href="#contacto" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+                        Registrar Mascota
+                    </button>
+                    <button class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">
+                        Iniciar Sesión
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">Inicio</a>
+                <a href="#como-funciona" class="text-gray-500 hover:text-blue-600 block px-3 py-2 text-base font-medium">Cómo Funciona</a>
+                <a href="#mascotas" class="text-gray-500 hover:text-blue-600 block px-3 py-2 text-base font-medium">Mascotas</a>
+                <a href="#contacto" class="text-gray-500 hover:text-blue-600 block px-3 py-2 text-base font-medium">Contacto</a>
+                <div class="pt-4 pb-3 border-t border-gray-200">
+                    <div class="flex items-center px-5">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors w-full">
+                            Registrar Mascota
+                        </button>
+                    </div>
+                    <div class="mt-3 px-5">
+                        <button class="text-gray-500 hover:text-gray-700 px-3 py-2 text-base font-medium w-full text-left">
+                            Iniciar Sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="bg-gradient-to-r from-blue-50 to-indigo-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div>
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="block xl:inline">Encuentra tu</span>
+                        <span class="block text-blue-600 xl:inline">mascota ideal</span>
+                        <span class="block xl:inline">con IA</span>
+                    </h1>
+                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                        Primera plataforma nacional con inteligencia artificial que conecta protectoras y adoptantes. 
+                        Búsqueda por foto, sistema de match personalizado y curso de adopción responsable.
+                    </p>
+                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-blue-600 text-white px-8 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition-colors">
+                                Buscar Mascota
+                            </button>
+                            <button class="bg-white text-blue-600 border border-blue-600 px-8 py-3 rounded-md text-base font-medium hover:bg-blue-50 transition-colors">
+                                Subir Foto
+                            </button>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500">
+                            ✨ Búsqueda inteligente por características
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-1">
+                    <div class="relative">
+                        <img class="w-full rounded-lg shadow-xl" src="images/hero-dog.jpg" alt="Mascotas disponibles para adopción" loading="eager">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent rounded-lg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Características</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Tecnología avanzada para adopciones responsables
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Utilizamos inteligencia artificial para crear las mejores conexiones entre mascotas y adoptantes.
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
+                                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Búsqueda por IA</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Encuentra tu mascota ideal subiendo una foto. Nuestra IA identifica características y encuentra el mejor match.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
+                                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Sistema de Match</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Algoritmo inteligente que analiza compatibilidad entre adoptantes y mascotas basado en estilo de vida y preferencias.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
+                                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Curso de Adopción</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Programa educativo completo para asegurar adopciones responsables y preparar tanto a la mascota como al adoptante.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="como-funciona" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Proceso</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Cómo funciona AdoptaIA
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <div class="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+                    <!-- Step 1 -->
+                    <div>
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto lg:mx-0">
+                            <span class="text-xl font-bold">1</span>
+                        </div>
+                        <div class="mt-6 text-center lg:text-left">
+                            <h3 class="text-lg font-medium text-gray-900">Regístrate</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Crea tu perfil como adoptante o protectora. Completa el cuestionario sobre tu estilo de vida y preferencias.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div>
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto lg:mx-0">
+                            <span class="text-xl font-bold">2</span>
+                        </div>
+                        <div class="mt-6 text-center lg:text-left">
+                            <h3 class="text-lg font-medium text-gray-900">Busca o sube</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Utiliza nuestro buscador inteligente o sube una foto para encontrar mascotas compatibles con tu perfil.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div>
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto lg:mx-0">
+                            <span class="text-xl font-bold">3</span>
+                        </div>
+                        <div class="mt-6 text-center lg:text-left">
+                            <h3 class="text-lg font-medium text-gray-900">Conecta y adopta</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Contacta con la protectora, completa el curso de adopción y lleva a casa tu nueva mascota.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Pets Section -->
+    <section id="mascotas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Mascotas Destacadas</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Encuentra tu compañero perfecto
+                </p>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Pet Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img class="w-full h-64 object-cover" src="images/pet1.jpg" alt="Luna - Perra mestiza" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-medium text-gray-900">Luna</h3>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                Disponible
+                            </span>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Perra mestiza • 2 años • Hembra</p>
+                        <p class="mt-3 text-sm text-gray-600">
+                            Muy juguetona y cariñosa. Le encanta jugar con niños y otros perros. Perfecta para familias.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Madrid</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+                                Ver Perfil
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pet Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img class="w-full h-64 object-cover" src="images/pet2.jpg" alt="Max - Gato siamés" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-medium text-gray-900">Max</h3>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                En proceso
+                            </span>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Gato siamés • 1 año • Macho</p>
+                        <p class="mt-3 text-sm text-gray-600">
+                            Inteligente y curioso. Muy tranquilo, ideal para pisos. Le gusta dormir en lugares cálidos.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Barcelona</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+                                Ver Perfil
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pet Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img class="w-full h-64 object-cover" src="images/pet3.jpg" alt="Bella - Perra labrador" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-medium text-gray-900">Bella</h3>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                Disponible
+                            </span>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Labrador • 4 años • Hembra</p>
+                        <p class="mt-3 text-sm text-gray-600">
+                            Muy obediente y cariñosa. Experiencia con niños pequeños. Perfecta para primeros adoptantes.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Valencia</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+                                Ver Perfil
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition-colors">
+                    Ver Todas las Mascotas
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-blue-600">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                <span class="block">¿Listo para adoptar?</span>
+                <span class="block text-blue-200">Comienza tu búsqueda hoy mismo.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex rounded-md shadow">
+                    <button class="bg-white text-blue-600 px-6 py-3 border border-transparent rounded-md text-base font-medium hover:bg-blue-50 transition-colors">
+                        Buscar Mascotas
+                    </button>
+                </div>
+                <div class="ml-3 inline-flex rounded-md shadow">
+                    <button class="bg-blue-700 text-white px-6 py-3 border border-transparent rounded-md text-base font-medium hover:bg-blue-800 transition-colors">
+                        Registrar Mascota
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <h3 class="text-2xl font-bold text-white">AdoptaIA</h3>
+                    <p class="text-gray-300 text-base">
+                        La primera plataforma española de adopción de mascotas con inteligencia artificial.
+                        Conectamos corazones, creamos familias.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.896 3.708 13.745 3.708 12.448c0-1.297.49-2.448 1.297-3.323C5.901 8.198 7.052 7.708 8.349 7.708c1.297 0 2.448.49 3.323 1.297c.875.807 1.297 1.958 1.297 3.255c0 1.297-.49 2.448-1.297 3.323c-.807.875-1.958 1.297-3.255 1.297z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-white tracking-wider uppercase">Para Adoptantes</h3>
+                            <ul class="mt-4 space-y-4">
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Buscar Mascotas</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Proceso de Adopción</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Curso de Adopción</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-white tracking-wider uppercase">Para Protectoras</h3>
+                            <ul class="mt-4 space-y-4">
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Registrar Mascotas</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Panel de Control</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Soporte</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">API</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-white tracking-wider uppercase">Empresa</h3>
+                            <ul class="mt-4 space-y-4">
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Acerca de</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Blog</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Empleo</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Prensa</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-white tracking-wider uppercase">Legal</h3>
+                            <ul class="mt-4 space-y-4">
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Privacidad</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Términos</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Cookies</a></li>
+                                <li><a href="#" class="text-base text-gray-300 hover:text-white">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <p class="text-base text-gray-400 text-center">
+                    &copy; 2025 AdoptaIA. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
